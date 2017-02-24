@@ -15,6 +15,7 @@ from .v1division import V1Division
 
 from .bankaccounts import BankAccounts
 from .contacts import Contacts
+from .costcenters import Costcenters
 from .invoices import Invoices
 from .ledgeraccounts import LedgerAccounts
 from .receivables import Receivables
@@ -35,6 +36,7 @@ class ExactApi(
 ):
     bankaccounts = BankAccounts.as_property()
     contacts = Contacts.as_property()
+    costcenters = Costcenters.as_property()
     invoices = Invoices.as_property()
     ledgeraccounts = LedgerAccounts.as_property()
     receivables = Receivables.as_property()
