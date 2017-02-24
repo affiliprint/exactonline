@@ -17,5 +17,5 @@ class Costcenters(Manager):
             kwargs['select'] = 'ID,Code,Description,Active,Division'
 
         if code is not None:
-            self._filter_append(kwargs, u'Code eq %s' % code)
+            self._filter_append(kwargs, u"Code eq '%s'" % code)
         return super(Costcenters, self).filter(**kwargs)
