@@ -144,6 +144,7 @@ class ExactRawApi(object):
         }
         if request.method in ('POST', 'PUT'):
             opt_custom.headers.update({'Content-Type': 'application/json'})
+            opt_custom.headers.update({'Prefer': 'return=representation'})
         opt = (opt_secure | opt_custom)
 
         if request.method == 'DELETE':
